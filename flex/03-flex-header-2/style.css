@@ -12,7 +12,24 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  padding: 12px 8px;
 }
+
+.left-container {
+  /* spacing could be achieved with justify-content: space-between on the container instead */
+  margin-right: auto;
+  display: flex;
+  /* align-items: center; */
+  gap: 16px;
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 
 .profile-image {
   background: rebeccapurple;
@@ -27,6 +44,17 @@ body {
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  /* there is a curious thing happening with the height of ul when we use aic on left-container vs on ul */
+  /* maybe because the default is ai:stretch */
+  /* check that tomorrow */
+  gap: 16px;
+  padding: 0;
+  margin: 0;
 }
 
 button {
