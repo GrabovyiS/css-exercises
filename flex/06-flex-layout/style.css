@@ -5,6 +5,17 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* 
+    Didn't think of doing that with flex: 1 on the content instead:
+    it would grow to fill all of the available space on the main 
+    (now vertical) axis.
+    Probably not the best practice to make the main container of your
+    page (body) display: flex
+    Although they actually did df on body in the solution
+  */
+  justify-content: space-between;
 }
 
 img {
@@ -16,6 +27,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /* got the correct padding from the image again, yay */
+  padding: 8px 16px;
 }
 
 input {
@@ -24,4 +37,37 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+}
+
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.footer {
+  background-color: lightgray;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* 
+    Could add a gap here but doesn't seem like there is one on  
+    the desired-outcome.png
+  */
 }
