@@ -78,6 +78,10 @@ button.cancel {
 
 .icon {
   /* this keeps the icon from getting smashed by the text */
+  /* 
+    that works the same as flex: none which makes the flex values 0 0 auto,
+    but it's more obscure than stating flex: none, which is probably better practice
+  */
   flex-shrink: 0;
 }
 /* header container should be wrapped around the button element as well in order for flex style to work */
