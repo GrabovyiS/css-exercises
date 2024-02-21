@@ -19,13 +19,19 @@ body {
 .left-container,
 .right-container {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 16px;
+}
+
+.right-container {
+  align-items: center;
 }
 
 .left-container {
   /* spacing could be achieved with justify-content: space-between on the container instead */
   margin-right: auto;
+  border: 2px solid black;
+  padding: 4px;
 }
 
 .profile-image {
@@ -41,23 +47,30 @@ body {
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
+  border: 2px solid red;
 }
 
 .links {
   display: flex;
-  /* align-items: center; */
-
+  align-items: center;
   /* 
     There is a curious thing happening with the height of ul when we use aic on left-container vs on ul
     maybe because the default is ai:stretch
     if aic is on the ul, the ul takes all the vertical space in the container
     if aic is on the container, the ul only takes up as much vertical space as content
-    leaving free space in the container  
+    leaving free space in the container.
+
+    If you center an item vertically inside the container, it stops being stretch
+    Also applies to other containers inside containers
+
+    That's why the height changes. If the container is ai:stretch and not aic,
+    then the container inside that container is align-self: stretch and so it takes up all available space
+    then making the inner container aic centers items inside of that extra space, instead of centering the whole container
   */
-  
   gap: 16px;
-  padding: 0;
   margin: 0;
+  padding: 4px;
+  border: 2px solid red;
 }
 
 button {
