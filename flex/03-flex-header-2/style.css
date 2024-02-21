@@ -53,6 +53,7 @@ body {
 .links {
   display: flex;
   align-items: center;
+  /* vertical centering could also be achieved by adding aic to the container holding this container */
   /* 
     There is a curious thing happening with the height of ul when we use aic on left-container vs on ul
     maybe because the default is ai:stretch
