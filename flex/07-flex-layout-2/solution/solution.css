@@ -49,6 +49,7 @@ body {
 }
 
 .sidebar {
+  /* Again seems like flex: none is better even though it achieves tha same thing */
   flex-shrink: 0;
   padding: 16px;
 }
@@ -60,6 +61,7 @@ ul {
 }
 
 li {
+  /* it is probably better to use margin than df on ul and gap for simple things */
   margin-bottom: 16px;
 }
 
